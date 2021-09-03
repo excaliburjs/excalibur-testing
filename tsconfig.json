@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+       "module": "commonjs",
+       "moduleResolution": "node",
+       "strict": true,
+       "target": "es2019",
+       "lib": ["DOM", "ES2019"],
+       "declaration": true,
+       "outDir": "./dist",
+       "sourceMap": true,
+       "baseUrl": "./",
+       "paths": {
+          "@excalibur-testing": ["./src/"]
+       }
+    },
+    "include": ["example/**/*.ts", "./src/*.ts", "./test/*.ts", "files.d.ts"],
+    "exclude": ["./example/**/*.tsx", "./test/integration/*.ts", "node_modules/*"]
+ }

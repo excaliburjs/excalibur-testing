@@ -1,0 +1,39 @@
+{
+  "name": "@excaliburjs/testing",
+  "version": "0.25.0",
+  "description": "Excalibur integration testing utilities",
+  "bin": {
+    "ex-test": "./dist/src/cli.js"
+  },
+  "main": "./dist/src/index.js",
+  "typings": "./dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test:cli": "node ./dist/src/cli.js -d ./test -t ./dist/test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excaliburjs/excalibur-testing.git"
+  },
+  "author": "Erik Onarheim",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/excaliburjs/excalibur-testing/issues"
+  },
+  "homepage": "https://github.com/excaliburjs/excalibur-testing#readme",
+  "dependencies": {
+    "@types/node": "16.7.10",
+    "@types/node-static": "0.7.7",
+    "@types/pixelmatch": "5.2.4",
+    "@types/pngjs": "6.0.1",
+    "@types/puppeteer": "5.4.4",
+    "commander": "8.1.0",
+    "node-static": "0.7.11",
+    "pixelmatch": "5.2.1",
+    "pngjs": "6.0.0",
+    "puppeteer": "10.2.0"
+  },
+  "devDependencies": {
+    "typescript": "4.4.2"
+  }
+}
