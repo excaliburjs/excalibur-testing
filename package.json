@@ -9,7 +9,7 @@
   "typings": "./dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test:cli": "node ./dist/src/cli.js -d ./test -t ./dist/test/test.js"
+    "test": "node ./dist/src/cli.js -d ./test -t ./dist/test/test.js"
   },
   "repository": {
     "type": "git",
