@@ -115,8 +115,13 @@ const expectLoadedInternal = async (page: puppeteer.Page | null) => {
    if (!page) {
       return false;
    }
-   await isLoaded(page);
-   await clickPlayButton(page);
+   try {
+      await isLoaded(page);
+      await clickPlayButton(page);
+   } catch (e) {
+      console.error('\x1b[31m%s\x1b[0m', '[ERROR]: Could not confirm Excalibur loaded properly', e);
+      // swallow
+   }
 }
 
 const expectPageInternal = (page: puppeteer.Page | null, pageName: string, actualFilePath: string) => {

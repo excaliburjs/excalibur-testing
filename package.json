@@ -1,6 +1,6 @@
 {
   "name": "@excaliburjs/testing",
-  "version": "0.25.0",
+  "version": "0.25.1",
   "description": "Excalibur integration testing utilities",
   "bin": {
     "ex-test": "./dist/src/cli.js"
@@ -34,6 +34,6 @@
     "puppeteer": "10.2.0"
   },
   "devDependencies": {
-    "typescript": "4.4.2"
+    "typescript": "4.6.3"
   }
 }
