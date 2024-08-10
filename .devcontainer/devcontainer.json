@@ -3,5 +3,5 @@
     "features": {
         "ghcr.io/devcontainers/features/node:1": {}
     },
-    "postCreateCommand": "bash -i -c 'sudo apt update && sudo apt install libxshmfence1 && nvm install --lts'"
+    "postCreateCommand": "bash -i -c 'sudo apt update && sudo apt install libxshmfence1 && nvm install --lts && npm install -g npm'"
 }
