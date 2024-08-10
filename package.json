@@ -1,6 +1,6 @@
 {
   "name": "@excaliburjs/testing",
-  "version": "0.25.1",
+  "version": "0.26.0",
   "description": "Excalibur integration testing utilities",
   "bin": {
     "ex-test": "./dist/src/cli.js"
@@ -22,12 +22,11 @@
   },
   "homepage": "https://github.com/excaliburjs/excalibur-testing#readme",
   "dependencies": {
+    "@brettz9/node-static": "0.1.1",
     "@types/node": "20.14.8",
-    "@types/node-static": "0.7.11",
     "@types/pixelmatch": "5.2.4",
     "@types/pngjs": "6.0.1",
     "commander": "8.1.0",
-    "node-static": "0.7.11",
     "pixelmatch": "5.2.1",
     "pngjs": "6.0.0",
     "puppeteer": "23.0.2"
