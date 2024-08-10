@@ -103,6 +103,7 @@ const isLoaded = async (page: puppeteer.Page) => {
 const clickPlayButton = async (page: puppeteer.Page) => {
    const start = await page.$('#excalibur-play');
    await start!.click();
+   // FIXME: see if this is still needed, possible removal if not
    // Left-over roots :( excalibur bug
    await page.evaluate(() => {
       const root = document.querySelector('#excalibur-play-root') as Element;
