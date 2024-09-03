@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as http from 'http';
-import * as nodestatic from 'node-static';
+import * as nodestatic from '@brettz9/node-static';
 import * as readline from 'readline';
 
 
@@ -8,6 +8,7 @@ import * as readline from 'readline';
 import * as pixelmatch from 'pixelmatch';
 import { PNG } from 'pngjs';
 import * as puppeteer from 'puppeteer';
+
 
 export interface ExTestContext {
    tests: [string, ((page: puppeteer.Page) => Promise<any>)][];
@@ -88,16 +89,27 @@ async function imageMatch(expectedFile: string, actualFile: string) {
 
 const isLoaded = async (page: puppeteer.Page) => {
    await page.waitForSelector('#excalibur-play', {visible: true});
-   await page.waitForTimeout(1000); // give it a second
+   // FIXME: see if this wait for timeout is still needed.
+   // on possiblity is to use node timers, see also: https://stackoverflow.com/a/77078415
+   // ```typescript
+   // ...
+   // 
+   // import { setTimeout } from "node:timers/promises";
+   // ...
+   // ```
+   // await page.waitForTimeout(1000); // give it a second
 }
 
 const clickPlayButton = async (page: puppeteer.Page) => {
    const start = await page.$('#excalibur-play');
    await start!.click();
+   // FIXME: see if this is still needed, possible removal if not
    // Left-over roots :( excalibur bug
    await page.evaluate(() => {
       const root = document.querySelector('#excalibur-play-root') as Element;
-      document.body.removeChild(root);
+      if (root) {
+         document.body.removeChild(root);
+      }
    });
 }
 
